@@ -1,8 +1,16 @@
 .TodoItem {
-  display: block;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
+  width: 70%;
+  padding: 0 20px 30px 35px;
+  margin: 12px 0;
+  border-bottom: 1px solid #cecece;
+  font-family: Roboto, sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+  color: #333333;
   cursor: pointer;
   font-size: 22px;
   -webkit-user-select: none;
@@ -33,7 +41,7 @@
 }
 
 .TodoItem input:checked ~ .Checkmark {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 .Checkmark::after {
