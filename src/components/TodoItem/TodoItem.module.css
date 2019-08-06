@@ -27,6 +27,12 @@
   width: 0;
 }
 
+.StrikeText {
+  text-decoration: line-through;
+  color: #ccc;
+  font-style: italic;
+}
+
 .Checkmark {
   position: absolute;
   top: 0;

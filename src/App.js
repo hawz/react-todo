@@ -10,12 +10,24 @@ class App extends Component {
   }
 
   onToggleCompleted = (todo) => {
-    const todoIndex = this.state.todos.findIndex(td => td.id === todo.id)
-    const newTodo = {...this.state.todos[todoIndex]}
-    const newTodos = [...this.state.todos]
-    newTodo.completed = !todo.completed;
-    newTodos[todoIndex] = newTodo;
-    this.setState({todos: newTodos});
+    // const todoIndex = this.state.todos.findIndex(td => td.id === todo.id)
+    // const newTodo = {...this.state.todos[todoIndex]}
+    // const newTodos = [...this.state.todos]
+    // newTodo.completed = !todo.completed;
+    // newTodos[todoIndex] = newTodo;
+    // this.setState({todos: newTodos});
+    // OR
+    this.setState(prevState => {
+      const updatedTodos = prevState.todos.map(td => {
+        if (todo.id === td.id) {
+          td.completed = !td.completed;
+        }
+        return td;
+      })
+      return {
+        todos: updatedTodos
+      }
+    })
   }
 
   render() {

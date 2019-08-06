@@ -3,8 +3,14 @@ import React from 'react'
 import classes from './TodoItem.module.css'
 
 const todoItem = (props) => {
+  const classNames = [classes.TodoItem]
+  if (props.todo.completed) {
+    classNames.push(classes.StrikeText)
+  }
+  // console.log();
+
   return (
-    <label className={classes.TodoItem}>
+    <label className={classNames.join(' ')}>
       {props.todo.text}
       <input
         type="checkbox"
