@@ -5,8 +5,12 @@ import classes from './TodoItem.module.css'
 const todoItem = (props) => {
   return (
     <label className={classes.TodoItem}>
-      One
-      <input type="checkbox" />
+      {props.todo.text}
+      <input
+        type="checkbox"
+        checked={props.todo.completed}
+        onChange={() => props.toggleCompleted(props.todo)}
+      />
       <span className={classes.Checkmark}></span>
     </label>
   )
