@@ -27,9 +27,9 @@
   width: 0;
 }
 
-.StrikeText {
+.TodoCompleted {
   text-decoration: line-through;
-  color: #ccc;
+  color: #cdcdcd;
   font-style: italic;
 }
 

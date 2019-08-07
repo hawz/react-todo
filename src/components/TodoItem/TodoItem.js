@@ -5,10 +5,8 @@ import classes from './TodoItem.module.css'
 const todoItem = (props) => {
   const classNames = [classes.TodoItem]
   if (props.todo.completed) {
-    classNames.push(classes.StrikeText)
+    classNames.push(classes.TodoCompleted)
   }
-  // console.log();
-
   return (
     <label className={classNames.join(' ')}>
       {props.todo.text}
